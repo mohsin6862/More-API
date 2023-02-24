@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header>
+        
+          <div class="navbar bg-base-300 shadow-xl">
+            <a class="btn btn-ghost normal-case text-5xl font-bold text-orange-500 gap-3"> Meal  <span class="text-red-500">   Deal</span></a>
+          </div>
+
+          <h1 class="text-4xl w-[30%] h-12 mx-auto text-black rounded-xl font-bold bg-gradient-to-r from-red-600 to-orange-600 text-center mt-10">Please Choose Your Meal</h1>
+          <div class="  text-center">
+            <input id="search-field"  class="border mt-5  w-1/4 h-12  rounded-xl px-10 bg-gradient-to-r from-red-500 to-orange-500 text-black font-semibold " type="text"  placeholder="Please Search Your Meal  ">
+          <button onclick="searchBtn()" class=" btn btn-secondary px-8 py-2">Search</button>
+          </div>
+    </header>
+
+    <main>
+        <section class="mt-20">
+            <div id="meal container" class="grid md:grid-cols-2 lg:grid-cols-4 w-3/4 mx-auto gap-5">
+                
+               
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <script src="js/meal.js"></script>
+    <script src="https://kit.fontawesome.com/04b6e0a84e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

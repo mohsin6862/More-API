@@ -12,8 +12,8 @@ const displayRandomUsers = (users)=>{
     const name =users.results[0].name.title + " " + users.results[0].name.first + " " + users.results[0].name.last;
     document.getElementById('name').innerText = name;
 
-    const image = users.results[0].picture.large;
-    document.getElementById('image').innerText = image;
+    const image = `<img src="${users.results[0].picture.large}" >` ;
+    document.getElementById('image').innerHTML = image;
 
     const location = users.results[0].location.city + ','+ users.results[0].location.country
     ;
@@ -23,3 +23,5 @@ const displayRandomUsers = (users)=>{
 }
 
 getRandomUsers();
+const bondCode=` I am Fake James bond . My new code is: 00${7+1+2}`
+console.log(d=bondCode);
