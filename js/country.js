@@ -1,13 +1,13 @@
-const getCountry = ()=>{
-
-    fetch('https://restcountries.com/v2/all')
+const getCountry = (searchText)=>{
+    const url = `https://restcountries.com/v2/name/${searchText}`;
+    fetch(url)
     .then(res => res.json())
     .then(data => displayCountry(data.slice(0,6)))
 }
 
 const displayCountry = (countries)=> {
      const countryContainer = document.getElementById('country-container');
-    //  countryContainer = '';
+     countryContainer.innerText = '';
     countries.forEach(country => {
       
         console.log(country)
@@ -33,5 +33,14 @@ const displayCountry = (countries)=> {
        countryContainer.appendChild(div);
         
     });
+
 }
-getCountry();
+
+const searchBtn = ()=>{
+
+    const searchText = document.getElementById('search-field').value;
+    getCountry(searchText)
+}
+
+
+getCountry('bangladesh');
